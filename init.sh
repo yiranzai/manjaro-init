@@ -14,6 +14,12 @@ sudo systemctl enable bumblebeed.service
 ### packages
 sudo pacman -S yaourt git google-chrome dos2unix synapse variety vim tree net-tools zsh  yay fcitx-im fcitx-configtool fcitx-sogoupinyin fcitx-googlepinyin nutstore uget neofetch htop wqy-microhei wqy-zenhei ttf-wps-fonts adobe-source-code-pro-fonts adobe-source-sans-pro-fonts	adobe-source-serif-pro-fonts adobe-source-han-sans-cn-fonts	adobe-source-han-serif-cn-fonts	deepin-screenshot xmind nemo nemo-fileroller netease-cloud-music redshift peek jetbrains-toolbox dbeaver npm visual-studio-code-bin openssh firefox firefox-i18n-zh-cn numix-circle-icon-theme papirus-icon-theme gtk-theme-arc-git konsole debtap vlc galculator
 
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
+git clone https://github.com/yiranzai/oh-my-zsh.git $HOME/.oh-my-zsh
+sh $HOME/.oh-my-zsh/install.sh
+source $HOME/.zshrc
+
 ### sublime
 curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
 echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
@@ -25,4 +31,4 @@ sudo n 8
 
 echo 'export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"' >> ~/.xprofile
+export XMODIFIERS="@im=fcitx"' >> $HOME/.xprofile
