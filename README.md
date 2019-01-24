@@ -10,6 +10,12 @@ $ cd ~/.manjaro-init
 $ ./init.sh
 ```
 
+or
+
+```sh
+curl -s  https://raw.githubusercontent.com/yiranzai/manjaro-init/master/init.sh | sh
+```
+
 ## package list
 
 ### 包管理工具
